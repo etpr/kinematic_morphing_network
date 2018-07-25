@@ -134,7 +134,7 @@ def test_transform_pointcloud():
 
 
 def test_resize_image():
-    D = Image.open(ROOT_DIR + '/kmn/scenes/box/data/raw/3_d.ppm')
+    D = Image.open(ROOT_DIR + '/kmn/scenes/box/data/raw/0_d.ppm')
 
     w = 128
     h = 96

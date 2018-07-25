@@ -77,7 +77,7 @@ def test_pred(model, data_gen, cfg):
 def test_multi_step_pred(model, data_gen, cfg):
     [x_train, y_train, x_test, y_test] = data_gen.load_dataset(small=True)
     D = x_train[0:1, :]
-    P = np.load(cfg['DATA_DIR'] + '/raw/0_pts.npy')
+    P = np.load(cfg['DATA_DIR'] + 'raw/0_pts.npy')
     n_pred = 3
     trans, D, P = model.multi_step_pred(D, P, n_pred)
     assert True
@@ -87,9 +87,9 @@ def test_ground_truth_pred(cfg, data_gen, scene):
     [x_train, y_train, x_test, y_test] = data_gen.load_dataset(small=True)
     P0 = np.load(cfg['DATA_DIR'] + 'raw/0_pts.npy')
     D0 = Image.open(cfg['DATA_DIR'] + 'raw/0_d.ppm')
-    D = Image.open(cfg['DATA_DIR'] + 'raw/3_d.ppm')
-    P = np.load(cfg['DATA_DIR'] + 'raw/3_pts.npy')
-    y = np.loadtxt(cfg['DATA_DIR'] + 'raw/3_param.dat')
+    D = Image.open(cfg['DATA_DIR'] + 'raw/1_d.ppm')
+    P = np.load(cfg['DATA_DIR'] + 'raw/1_pts.npy')
+    y = np.loadtxt(cfg['DATA_DIR'] + 'raw/1_param.dat')
 
     T = scene.param_to_trans(y)
     print(y)
@@ -122,8 +122,8 @@ def test_augment_datapoint(model, data_gen, cfg):
 
 def test_render_depth_image(cfg, data_gen):
     [x_train, y_train, x_test, y_test] = data_gen.load_dataset(small=True)
-    P = np.load(cfg['DATA_DIR'] + 'raw/1_pts.npy')
-    D = Image.open(cfg['DATA_DIR'] + 'raw/1_d.ppm')
+    P = np.load(cfg['DATA_DIR'] + 'raw/0_pts.npy')
+    D = Image.open(cfg['DATA_DIR'] + 'raw/0_d.ppm')
     cam_param = np.loadtxt(cfg['DATA_DIR'] + 'raw/0_camParam.dat')
     T_world_cam = np.loadtxt(cfg['DATA_DIR'] + 'raw/0_camT.dat')
     T_cam_world = invert_trans(T_world_cam)

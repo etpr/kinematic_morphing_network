@@ -7,10 +7,10 @@ The package implements the training and prediction algorithms of KMNs, which can
 > [Kinematic Morphing Networks for Manipulation Skill Transfer](https://arxiv.org/pdf/1803.01777.pdf)
 > In Proceedings of the International Conference on Intelligent Robotics Systems, 2018
 
-## notebooks
+## kmn/notebooks
 This folder contains jupyter notebooks for running and evaluating experiments.
 
-## scenes
+## kmn/scenes
 The following scenes are implemented:
 
 | Scene name  | Number of transformation parameters | Number of configuration parameters |
@@ -22,5 +22,5 @@ The following scenes are implemented:
 
 The package contains multiple configs and data samples for each scene. Feel free to contact me if you are interested in the full dataset.
 
-## models
+## kmn/models
 This folder contains different convolutional neural network parametrizations.

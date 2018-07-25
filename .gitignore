@@ -1,3 +1,10 @@
+# Custom
+.DS_Store
+results
+raw
+x.npy
+y.npy
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

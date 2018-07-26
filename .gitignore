@@ -4,6 +4,9 @@ results
 .idea
 x.npy
 y.npy
+*_pts.npy
+*_d.ppm
+*_param.dat
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

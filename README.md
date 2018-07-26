@@ -13,14 +13,12 @@ This folder contains jupyter notebooks for running and evaluating experiments.
 ## kmn/scenes
 The following scenes are implemented:
 
-| Scene name  | Number of transformation parameters | Number of configuration parameters |
-| :---        |     :---:                   |          :---:             |
-| box         | 1                           | 0                          |
-| box_trans   | 3                           | 0                          |
-| box_complex | 5                           | 0                          |
-| door        | 3                           | 4                          |
-
-The package contains multiple configs and data samples for each scene. Feel free to contact me if you are interested in the full dataset.
+| Scene name  | Number of transformation parameters | Number of configuration parameters | Link to dataset |
+| :---        |     :---:                   |          :---:             | :---: |
+| box         | 1                           | 0                          | [box.tar.gz](https://ipvs.informatik.uni-stuttgart.de/mlr/peter/kmn/box.tar.gz) |
+| box_trans   | 3                           | 0                          | [box_trans.tar.gz](https://ipvs.informatik.uni-stuttgart.de/mlr/peter/kmn/box_trans.tar.gz) |
+| box_complex | 5                           | 0                          | [box_complex.tar.gz](https://ipvs.informatik.uni-stuttgart.de/mlr/peter/kmn/box_complex.tar.gz) |
+| door        | 3                           | 4                          | [door.tar.gz](https://ipvs.informatik.uni-stuttgart.de/mlr/peter/kmn/door.tar.gz) |
 
 ## kmn/models
 This folder contains different convolutional neural network parametrizations.

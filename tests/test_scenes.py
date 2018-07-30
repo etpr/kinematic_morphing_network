@@ -14,7 +14,7 @@ os.chdir('../')
 VIS_TEST = False
 
 
-@pytest.fixture(params=["box", "door", "box_trans", "box_complex"])
+@pytest.fixture(params=["box", "door", "box_xy", "box_trans", "box_complex"])
 def cfg(request):
     scene_name = request.param
     c = read_cfg(ROOT_DIR + "/kmn/scenes/" + scene_name + "/cfgs/basic", "tmp/")

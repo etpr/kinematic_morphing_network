@@ -5,7 +5,7 @@ from matplotlib2tikz import save as tikz_save
 from texttable import Texttable
 from kmn.util import get_col_idx
 from kmn.tf_util import load_cfg
-
+from definitions import ROOT_DIR
 
 def evaluate_experiment(runs, scene, save_plots=False):
     """
@@ -23,6 +23,7 @@ def evaluate_experiment(runs, scene, save_plots=False):
 
     for i in range(len(runs)):
         cfg = load_cfg("kmn/scenes/" + scene + "/logs/" + runs[i] + "/run.npy")
+        cfg['LOG_DIR'] = ROOT_DIR + "/kmn/scenes/" + cfg['SCENE'] + "/logs/" + cfg['LOG_NAME'] + "/"
 
         n_conf = "N_CONF" in cfg and cfg['N_CONF'] is not 0
         iter_start = 1
